@@ -6,6 +6,7 @@ import NavBar from './components/Navbar.vue'
   <!-- Contenido de html con herramientas de Vue -->
   <header>
     <NavBar />
+    <h1>Trial</h1>
   </header>
 </template>
 
