@@ -6,53 +6,36 @@
     <div class="navegation">
       <a v-for="item in navegation" :key="item.id" :href="item.link">{{ item.name }}</a>
     </div>
-
-    <!-- Language Selection -->
-    <div class="box_lang_selector" @click="toggleMenu">
-      <img src="../static/img/language-svgrepo-com.svg" alt="" />
-      <ul v-if="showMenu" class="lang_menu">
-        <li @click="setLanguage('es')">Español</li>
-        <li @click="setLanguage('en')">English</li>
-      </ul>
-    </div>
   </nav>
 </template>
+
+<script setup>
+import '../static/css/styles.css' // Importar estilos globales
+import { ref } from 'vue' // Importar ref para crear referencias reactivas
+
+const navegation = ref([
+  { id: 1, name: 'Educacion', link: '#education' },
+  { id: 2, name: 'Proyectos', link: '#project' },
+  { id: 3, name: 'Contacto', link: '#contact' },
+])
+</script>
 
 <style scoped>
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px 10px 20px;
+  padding: 15px 20px 15px 20px;
   border-bottom: 1px solid #ddd;
 }
 
 nav h3 {
-  color: var(--dark-blue);
-}
-
-.box_lang_selector {
-  position: relative;
-  border: 2px solid;
-  border-radius: 5px;
-  background-color: var(white);
-}
-
-.box_lang_selector:hover {
-  transition: 0.5s;
-  background-color: var(--green);
-}
-
-img {
-  width: 35px;
-  cursor: pointer;
-  margin-top: 3px;
+  color: var(--dark_blue);
 }
 
 .navegation {
   display: flex;
   gap: 20px;
-  margin-right: 35px;
 }
 
 .navegation a {
@@ -62,7 +45,7 @@ img {
 
 .navegation a:hover {
   transition: 0.5s;
-  color: var(--dark-blue);
+  color: var(--green);
 }
 
 .lang_menu {
@@ -88,31 +71,3 @@ img {
   color: white;
 }
 </style>
-
-<script setup>
-import '../static/css/styles.css' // Importar estilos globales
-import { ref } from 'vue' // Importar ref para crear referencias reactivas
-
-const navegation = ref([
-  { id: 1, name: 'Educacion', link: '#education' },
-  { id: 2, name: 'Proyectos', link: '#project' },
-  { id: 3, name: 'Contacto', link: '#contact' },
-])
-
-// Show language menu
-const showMenu = ref(false)
-const currentLanguage = ref('es')
-
-function toogleMenu() {
-  showMenu.value = !showMenu.value
-}
-
-function setLanguage(lang) {
-  currentLanguage.value = lang
-  showMenu.value = false
-
-  // Seeing whether to change the language manually
-  // or use the internationalization library called vue-i18n,
-  // with that I can have a translation file in a JSON
-}
-</script>

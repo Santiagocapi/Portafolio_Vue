@@ -1,14 +1,18 @@
 <script setup>
 import NavBar from './components/Navbar.vue'
+import Profile from './components/Profile.vue'
 </script>
 
 <template>
   <!-- HTML Content with vue's tools -->
   <header>
-    <NavBar />
     <!-- NavBar Component -->
-    <h1>Trial</h1>
+    <NavBar />
   </header>
+  <main>
+    <!-- Profile Component -->
+    <Profile />
+  </main>
 </template>
 
 <style scoped></style>
