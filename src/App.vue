@@ -1,4 +1,5 @@
 <script setup>
+import Education from './components/Education.vue'
 import NavBar from './components/Navbar.vue'
 import Profile from './components/Profile.vue'
 </script>
@@ -9,9 +10,13 @@ import Profile from './components/Profile.vue'
     <!-- NavBar Component -->
     <NavBar />
   </header>
-  <main>
+  <section>
     <!-- Profile Component -->
     <Profile />
+  </section>
+  <main>
+    <!-- Education Component -->
+    <Education />
   </main>
 </template>
 
