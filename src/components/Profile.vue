@@ -1,22 +1,22 @@
 <template>
   <section class="profile">
-    <div class="profile_content">
-      <div class="img_container">
-        <img src="../static/img/IMG-20250115-WA0221.jpg" alt="" />
+    <div class="profile-content">
+      <div class="img-container">
+        <img src="/img/IMG-20250115-WA0221.jpg" alt="" />
       </div>
-      <div class="profile_text">
-        <h1>Hola, Soy <span class="text_highlight">Santiago Capitani</span></h1>
+      <div class="profile-text">
+        <h1>Hola, Soy <span class="text-highlight">Santiago Capitani</span></h1>
         <h4>Técnico Informático y desarrollador Full Stack</h4>
         <p>
           Me especializo en crear soluciones web completas, desde el diseño del frontend hasta la
           lógica del backend. Me apasiona aprender nuevas tecnologías y construir proyectos que unan
           funcionalidad y diseño.
         </p>
-        <div class="social_network">
+        <div class="social-network">
           <a href="https://github.com/Santiagocapi"
             ><svg
+              style="width: 36px"
               class="github"
-              style="width: 35px"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 640 640"
             >
@@ -43,35 +43,37 @@
   </section>
 </template>
 
-<script setup></script>
-
 <style scoped>
 .profile {
-  padding: 30px 30rem;
+  padding: 5rem 2rem;
   display: flex;
   justify-content: center;
 }
 
-.profile_content {
+.profile-content {
   display: flex;
   align-items: center;
   gap: 50px;
+  max-width: 1100px;
+  width: 100%;
 }
 
-.img_container {
+.img-container {
   display: inline-block;
-  border: 4px solid var(--green);
+  border: 4px solid var(--primary);
   padding: 6px;
   background-color: #fff;
+  border-radius: 8px;
 }
 
 img {
   display: block;
   width: 300px;
   height: 350px;
+  border-radius: 4px;
 }
 
-.profile_text {
+.profile-text {
   max-width: 600px;
   display: flex;
   flex-direction: column;
@@ -82,29 +84,37 @@ h1 {
   font-size: 2.5rem;
 }
 
-.text_highlight {
-  color: var(--dark_blue);
+.text-highlight {
+  color: var(--primary);
 }
 
 h4 {
   font-size: 1rem;
-  color: var(--grey);
+  color: var(--text-secondary);
 }
 
-.social_network {
+p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.social-network {
   margin-top: 10px;
   display: flex;
-  gap: 10px;
+  gap: 15px;
   align-items: center;
 }
 
+.social-network svg {
+  fill: var(--text-secondary);
+  transition: fill 0.3s ease;
+}
+
 .github:hover {
-  fill: var(--green);
-  transition: 0.5s;
+  fill: var(--accent);
 }
 
 .linkedin:hover {
-  fill: var(--dark_blue);
-  transition: 0.5s;
+  fill: var(--primary);
 }
 </style>

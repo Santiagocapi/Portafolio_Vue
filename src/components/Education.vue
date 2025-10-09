@@ -1,131 +1,179 @@
 <template>
-  <section class="education_content">
+  <section class="education-section">
     <h2>Mi Educación</h2>
+    <div class="horizontal-timeline">
+      <div v-for="item in education" :key="item.id" class="timeline-item">
+        <div class="timeline-point"></div>
 
-    <div class="timeline" role="list">
-      <article
-        v-for="(item, i) in education"
-        :key="item.id ?? i"
-        class="timeline_item"
-        role="listitem"
-      >
-        <div class="timeline_icon">
-          <svg style="width: 18px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-            <path
-              d="M48 195.8l209.2 86.1c9.8 4 20.2 6.1 30.8 6.1s21-2.1 30.8-6.1l242.4-99.8c9-3.7 14.8-12.4 14.8-22.1s-5.8-18.4-14.8-22.1L318.8 38.1C309 34.1 298.6 32 288 32s-21 2.1-30.8 6.1L14.8 137.9C5.8 141.6 0 150.3 0 160L0 456c0 13.3 10.7 24 24 24s24-10.7 24-24l0-260.2zm48 71.7L96 384c0 53 86 96 192 96s192-43 192-96l0-116.6-142.9 58.9c-15.6 6.4-32.2 9.7-49.1 9.7s-33.5-3.3-49.1-9.7L96 267.4z"
-            />
-          </svg>
-        </div>
+        <div class="flip-card-scene">
+          <div
+            class="flip-card-inner"
+            :class="{ 'is-flipped': item.isFlipped }"
+            @click="item.isFlipped = !item.isFlipped"
+          >
+            <div class="timeline-card card-front">
+              <time class="years">{{ item.years }}</time>
+              <h3 class="degree">{{ item.degree }}</h3>
+              <p class="institution">{{ item.institution }}</p>
+              <span class="flip-indicator">Tocar para más info</span>
+            </div>
 
-        <div class="timeline_content">
-          <h3 class="degree">{{ item.degree }}</h3>
-          <p class="university">{{ item.institution }}</p>
-          <time class="years" :datetime="item.start + '-' + item.end">
-            {{ item.years }}
-          </time>
+            <div class="timeline-card card-back">
+              <p class="description">{{ item.description }}</p>
+            </div>
+          </div>
         </div>
-      </article>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup>
-const props = defineProps({
-  education: {
-    type: Array,
-    default: () => [
-      {
-        id: 1,
-        degree: 'Tecnico Informatico',
-        institution: 'Escuela Técnica de la Universidad de Mendoza',
-        years: '2018-2023',
-        start: 2018,
-        end: 2023,
-      },
-      {
-        id: 2,
-        degree: 'Ingeniero Informático',
-        institution: 'Universidad de Mendoza',
-        years: '2024-2025',
-        start: 2024,
-        end: 2025,
-      },
-      {
-        id: 3,
-        degree: 'Tecnico en Programación',
-        institution: 'Universidad Tecnológica Nacional',
-        years: '2025-Actualidad',
-        start: 2025,
-        end: 'Actualidad',
-      },
-    ],
+import { ref } from 'vue'
+
+const education = ref([
+  {
+    id: 1,
+    degree: 'Tecnico Informatico',
+    institution: 'Escuela Técnica de la Universidad de Mendoza',
+    years: '2018-2023',
+    description:
+      'Formación integral en hardware, software y redes. Adquirí una base sólida en mantenimiento de sistemas, arquitectura de computadoras y los principios fundamentales de la programación y bases de datos.',
+    isFlipped: false,
   },
-})
+  {
+    id: 2,
+    degree: 'Ingeniero Informático',
+    institution: 'Universidad de Mendoza',
+    years: '2024-2025',
+    description:
+      'Profundización en algoritmos complejos, arquitectura de software y paradigmas de programación avanzados. El enfoque está en el diseño de soluciones tecnológicas eficientes, escalables y seguras.',
+    isFlipped: false,
+  },
+  {
+    id: 3,
+    degree: 'Tecnico en Programación',
+    institution: 'Universidad Tecnológica Nacional',
+    years: '2025-Actualidad',
+    description:
+      'Carrera intensiva centrada en el desarrollo de software práctico. Especialización en stacks de tecnologías modernas, metodologías ágiles y la construcción de aplicaciones full-stack.',
+    isFlipped: false,
+  },
+])
 </script>
 
 <style scoped>
-.education_content {
-  padding: 30px 30rem;
+.education-section {
+  padding: 4rem 2rem;
+  background-color: var(--light-grey, #f8f9fa);
+  text-align: center;
 }
-
-.education_content h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: var(--green);
+h2 {
+  color: var(--primary, #0d6efd);
+  font-size: 2rem;
+  margin-bottom: 3rem;
 }
-
-/* Línea vertical */
-.timeline {
-  position: relative;
-  margin-left: 1.2rem;
-  border-left: 3px solid var(--dark_blue);
-  padding-left: 2rem;
-  margin-left: 2rem;
-}
-
-/* Cada entrada de educación */
-.timeline_item {
-  position: relative;
-  margin-bottom: 2rem;
-}
-
-/* Ícono circular */
-.timeline_icon {
-  position: absolute;
-  left: -3rem;
-  top: 0rem;
-  background-color: var(--dark_blue);
-  border: 2px solid var(--dark_blue);
-  width: 1.7rem;
-  height: 1.7rem;
-  border-radius: 50%;
+.horizontal-timeline {
   display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+.horizontal-timeline::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--grey, #6c757d);
+  z-index: 1;
+}
+.timeline-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  width: calc(100% / 3);
+}
+.timeline-point {
+  width: 24px;
+  height: 24px;
+  background-color: var(--white, #fff);
+  border: 4px solid var(--primary, #0d6efd);
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 1.5rem;
+}
+
+.flip-card-scene {
+  width: 90%;
+  height: 220px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.timeline-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: var(--white, #fff);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
-.timeline_icon svg {
-  fill: var(--white);
-  margin: 0 0 1px 1px;
+.card-back {
+  transform: rotateY(180deg);
 }
 
-/* Contenido */
-.timeline_content {
-  margin-left: 1rem;
+.years {
+  display: inline-block;
+  background-color: var(--primary, #0d6efd);
+  color: var(--white, #fff);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
-
-.timeline_content h3 {
-  font-size: 1.1rem;
-  font-weight: bold;
+.degree {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
-
-.timeline_content p {
+.institution {
   font-size: 0.95rem;
-  margin: 0.2rem 0;
+  color: var(--text-secondary, #6c757d);
 }
-
-.timeline_content time {
+.description {
   font-size: 0.9rem;
-  color: #555;
+  color: var(--text-secondary, #6c757d);
+  line-height: 1.5;
+}
+.flip-indicator {
+  font-size: 0.75rem;
+  color: #adb5bd;
+  margin-top: 1rem;
+  font-style: italic;
 }
 </style>

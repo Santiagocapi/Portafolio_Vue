@@ -2,6 +2,7 @@
 import Education from './components/Education.vue'
 import NavBar from './components/Navbar.vue'
 import Profile from './components/Profile.vue'
+import Technologies from './components/Technologies.vue'
 </script>
 
 <template>
@@ -14,9 +15,15 @@ import Profile from './components/Profile.vue'
     <!-- Profile Component -->
     <Profile />
   </section>
-  <main>
+  <section>
     <!-- Education Component -->
     <Education />
+  </section>
+  <main>
+    <!-- Technologies Component -->
+    <Technologies />
+
+    <!-- Projects Component -->
   </main>
 </template>
 
