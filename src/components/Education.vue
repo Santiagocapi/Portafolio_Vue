@@ -3,7 +3,7 @@
     <h2>Mi Educación</h2>
     <div class="horizontal-timeline">
       <div v-for="item in education" :key="item.id" class="timeline-item">
-        <div class="timeline-point"></div>
+        <div class="timeline-point" :class="{ active: item.isFlipped }"></div>
 
         <div class="flip-card-scene">
           <div
@@ -106,6 +106,11 @@ h2 {
   position: relative;
   z-index: 2;
   margin-bottom: 1.5rem;
+  transition: border-color 0.4s ease;
+}
+
+.timeline-point.active {
+  border-color: var(--accent);
 }
 
 .flip-card-scene {
@@ -140,10 +145,25 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .card-back {
   transform: rotateY(180deg);
+  justify-content: center;
+  position: relative;
+}
+
+.card-back::before {
+  content: '“';
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  font-size: 5rem;
+  color: var(--light-grey, #e2e2e2);
+  font-family: 'Times New Roman', serif;
+  z-index: 0;
+  line-height: 1;
 }
 
 .years {
@@ -163,12 +183,14 @@ h2 {
 }
 .institution {
   font-size: 0.95rem;
-  color: var(--text-secondary, #6c757d);
+  color: var(--text-secondary);
 }
 .description {
-  font-size: 0.9rem;
-  color: var(--text-secondary, #6c757d);
-  line-height: 1.5;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
 }
 .flip-indicator {
   font-size: 0.75rem;
