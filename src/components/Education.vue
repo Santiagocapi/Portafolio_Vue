@@ -65,7 +65,7 @@ const education = ref([
 <style scoped>
 .education-section {
   padding: 4rem 2rem;
-  background-color: var(--light-grey, #f8f9fa);
+  background-color: var(--light-grey);
   text-align: center;
 }
 h2 {

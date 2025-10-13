@@ -2,7 +2,7 @@
   <section class="profile">
     <div class="profile-content">
       <div class="img-container">
-        <img src="/img/IMG-20250115-WA0221.jpg" alt="" />
+        <img src="" alt="" />
       </div>
       <div class="profile-text">
         <h1>Hola, Soy <span class="text-highlight">Santiago Capitani</span></h1>

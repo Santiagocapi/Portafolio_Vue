@@ -3,6 +3,7 @@ import Education from './components/Education.vue'
 import NavBar from './components/Navbar.vue'
 import Profile from './components/Profile.vue'
 import Technologies from './components/Technologies.vue'
+import Projects from './components/Projects.vue'
 </script>
 
 <template>
@@ -24,6 +25,7 @@ import Technologies from './components/Technologies.vue'
     <Technologies />
 
     <!-- Projects Component -->
+    <Projects />
   </main>
 </template>
 

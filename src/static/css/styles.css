@@ -12,16 +12,19 @@
 }
 
 * {
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Inter', sans-serif;
-    color: var(--text-primary);
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-primary);
+  scroll-behavior: smooth;
+}
 
-  body {
-    background-color: var(--background);
-  }
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
 }
