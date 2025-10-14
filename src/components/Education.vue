@@ -68,11 +68,7 @@ const education = ref([
   background-color: var(--light-grey);
   text-align: center;
 }
-h2 {
-  color: var(--primary, #0d6efd);
-  font-size: 2rem;
-  margin-bottom: 3rem;
-}
+
 .horizontal-timeline {
   display: flex;
   justify-content: space-between;

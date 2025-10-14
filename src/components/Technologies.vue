@@ -122,13 +122,6 @@ const technologies = ref([
   padding: 4rem 2rem;
 }
 
-h2 {
-  text-align: center;
-  color: var(--primary);
-  font-size: 2rem;
-  margin-bottom: 3rem;
-}
-
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -149,6 +142,7 @@ h2 {
   transform: translateY(-8px);
 }
 
+/* Cards */
 .tech-card {
   background-color: var(--white);
   border-radius: 10px;
@@ -175,7 +169,7 @@ h2 {
   color: var(--tech-color);
 }
 
-/* Gradientes */
+/* Gradients */
 .vue-gradient {
   background-image: linear-gradient(45deg, #42b883, #347474);
 }
@@ -226,8 +220,5 @@ h2 {
 }
 .figma-gradient {
   background-image: linear-gradient(45deg, #f24e1e, #ffffff);
-}
-.jest-gradient {
-  background-image: linear-gradient(45deg, #c21325, #99424f);
 }
 </style>

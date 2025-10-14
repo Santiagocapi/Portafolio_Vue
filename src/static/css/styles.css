@@ -21,10 +21,21 @@
   scroll-behavior: smooth;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   background-color: var(--background);
+}
+
+h2 {
+  text-align: center;
+  color: var(--black);
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }

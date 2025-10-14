@@ -4,6 +4,7 @@ import NavBar from './components/Navbar.vue'
 import Profile from './components/Profile.vue'
 import Technologies from './components/Technologies.vue'
 import Projects from './components/Projects.vue'
+import Contact from './components/Contact.vue'
 </script>
 
 <template>
@@ -27,6 +28,10 @@ import Projects from './components/Projects.vue'
     <!-- Projects Component -->
     <Projects />
   </main>
+  <section>
+    <!-- Contact component-->
+    <Contact />
+  </section>
 </template>
 
 <style scoped></style>
