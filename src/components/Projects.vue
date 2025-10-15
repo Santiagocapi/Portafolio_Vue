@@ -108,14 +108,14 @@ const projects = ref([
 .projects-section {
   padding: 4rem 2rem;
   background-color: var(--light-grey, #f8f9fa);
-}
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 
 /* Cards */
@@ -129,11 +129,15 @@ const projects = ref([
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
-}
 
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    .card-color-background i {
+      transform: scale(1.1);
+    }
+  }
 }
 
 .card-color-background {
@@ -143,14 +147,12 @@ const projects = ref([
   align-items: center;
   position: relative;
   overflow: hidden;
-}
-.card-color-background i {
-  font-size: 6rem;
-  color: rgba(255, 255, 255, 0.2);
-  transition: transform 0.4s ease;
-}
-.project-card:hover .card-color-background i {
-  transform: scale(1.1);
+
+  i {
+    font-size: 6rem;
+    color: rgba(255, 255, 255, 0.2);
+    transition: transform 0.4s ease;
+  }
 }
 
 .card-content {
@@ -158,31 +160,41 @@ const projects = ref([
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-}
-.card-content h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-}
-.card-content p {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  flex-grow: 1;
-}
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1rem 0;
+
+  h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
 }
 
 /* Tags */
+
 .tag {
   padding: 0.3rem 0.8rem;
   border-radius: 5px 0 5px 0;
   font-size: 0.8rem;
   font-weight: 500;
   color: var(--white);
+  transition: 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 }
 
 /* Projects Link Button */
@@ -191,16 +203,17 @@ const projects = ref([
   display: flex;
   gap: 1rem;
   margin-top: auto;
-}
 
-.btn-secondary {
-  background-color: transparent;
-  color: var(--btn-color);
-  border: 2px solid var(--btn-color);
-}
-.btn-secondary:hover {
-  background-color: var(--btn-color);
-  color: var(--white);
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--btn-color);
+    border: 2px solid var(--btn-color);
+
+    &:hover {
+      background-color: var(--btn-color);
+      color: var(--white);
+    }
+  }
 }
 
 /* More Projects Button */
@@ -208,26 +221,26 @@ const projects = ref([
 .more-projects-link {
   text-align: center;
   margin-top: 3rem;
-}
 
-.btn-accent {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: var(--primary);
-  color: var(--white);
-  padding: 0.8rem 2rem;
-  font-size: 1.1rem;
-  border: none;
-}
+  .btn-accent {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border: none;
 
-.btn-accent .github {
-  fill: var(--white);
-}
+    &:hover {
+      background-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(13, 110, 253, 0.4);
+    }
 
-.btn-accent:hover {
-  background-color: var(--accent);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.4);
+    .github {
+      fill: var(--white);
+    }
+  }
 }
 </style>

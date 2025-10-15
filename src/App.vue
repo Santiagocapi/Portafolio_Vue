@@ -13,25 +13,22 @@ import Contact from './components/Contact.vue'
     <!-- NavBar Component -->
     <NavBar />
   </header>
-  <section>
+
+  <main>
     <!-- Profile Component -->
     <Profile />
-  </section>
-  <section>
+
     <!-- Education Component -->
     <Education />
-  </section>
-  <main>
+
     <!-- Technologies Component -->
     <Technologies />
 
     <!-- Projects Component -->
     <Projects />
   </main>
-  <section>
-    <!-- Contact component-->
-    <Contact />
-  </section>
+  <!-- Contact component-->
+  <Contact />
 </template>
 
 <style scoped></style>

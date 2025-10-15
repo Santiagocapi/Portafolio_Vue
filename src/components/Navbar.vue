@@ -22,24 +22,24 @@ nav {
   align-items: center;
   padding: 15px 10%;
   border-bottom: 1px solid var(--grey);
-}
 
-nav h3 {
-  color: var(--primary);
-}
+  h3 {
+    color: var(--primary);
+  }
 
-.navegation {
-  display: flex;
-  gap: 20px;
+  .navegation {
+    display: flex;
+    gap: 20px;
+  }
 }
 
 .navegation a {
   color: var(--text-primary);
   font-weight: 500;
   transition: color 0.3s ease;
-}
 
-.navegation a:hover {
-  color: var(--accent);
+  &:hover {
+    color: var(--accent);
+  }
 }
 </style>

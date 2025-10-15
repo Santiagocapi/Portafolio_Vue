@@ -120,29 +120,39 @@ const technologies = ref([
 <style scoped>
 .technologies-section {
   padding: 4rem 2rem;
-}
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 4rem 2rem;
+  position: relative;
 
-.tech-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
 
-.tech-card-wrapper {
-  padding: 3px;
-  border-radius: 12px;
-  background-size: 200% 200%;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
+    /* Contour */
+    .tech-card-wrapper {
+      padding: 4px;
+      border-radius: 12px;
+      background-size: 200% 200%;
+      transition: transform 0.3s ease;
+      cursor: pointer;
 
-.tech-card-wrapper:hover {
-  transform: translateY(-8px);
+      &:hover {
+        transform: translateY(-8px);
+
+        .tech-card i {
+          color: var(--tech-color);
+        }
+      }
+    }
+  }
 }
 
 /* Cards */
+
 .tech-card {
   background-color: var(--white);
   border-radius: 10px;
@@ -152,72 +162,76 @@ const technologies = ref([
   justify-content: center;
   align-items: center;
   gap: 1rem;
-}
 
-.tech-card i {
-  font-size: 4rem;
-  color: var(--grey);
-  transition: color 0.4s ease;
-}
+  i {
+    font-size: 4rem;
+    color: var(--grey);
+    transition: color 0.4s ease;
+  }
 
-.tech-card span {
-  font-weight: 500;
-  color: #34495e;
-}
-
-.tech-card-wrapper:hover .tech-card i {
-  color: var(--tech-color);
+  span {
+    font-weight: 500;
+    color: #34495e;
+  }
 }
 
 /* Gradients */
 .vue-gradient {
   background-image: linear-gradient(45deg, #42b883, #347474);
 }
+
 .react-gradient {
   background-image: linear-gradient(45deg, #61dafb, #20232a);
 }
+
 .js-gradient {
   background-image: linear-gradient(45deg, #f7df1e, #b0a010);
 }
-.ts-gradient {
-  background-image: linear-gradient(45deg, #3178c6, #007acc);
-}
+
 .html-gradient {
   background-image: linear-gradient(45deg, #e34f26, #f16529);
 }
+
 .css-gradient {
   background-image: linear-gradient(45deg, #1572b6, #3c99dc);
 }
-.sass-gradient {
-  background-image: linear-gradient(45deg, #c69, #96c);
-}
+
 .node-gradient {
   background-image: linear-gradient(45deg, #68a063, #333);
 }
+
 .express-gradient {
   background-image: linear-gradient(45deg, #000000, #444);
 }
+
 .python-gradient {
   background-image: linear-gradient(45deg, #3776ab, #ffde57);
 }
+
 .flask-gradient {
   background-image: linear-gradient(45deg, #000000, #333);
 }
+
 .java-gradient {
   background-image: linear-gradient(45deg, #f89820, #5382a1);
 }
+
 .mongo-gradient {
   background-image: linear-gradient(45deg, #47a248, #3f9942);
 }
+
 .mysql-gradient {
   background-image: linear-gradient(45deg, #0091ff, #f29111);
 }
+
 .git-gradient {
   background-image: linear-gradient(45deg, #f05032, #333);
 }
+
 .docker-gradient {
   background-image: linear-gradient(45deg, #2496ed, #1d6fa5);
 }
+
 .figma-gradient {
   background-image: linear-gradient(45deg, #f24e1e, #ffffff);
 }

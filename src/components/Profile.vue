@@ -25,7 +25,7 @@
               />
             </svg>
           </a>
-          <a href="">
+          <a href="https://www.linkedin.com/in/santiago-capitani-clavero-038252327">
             <svg
               class="linkedin"
               style="width: 27px"
@@ -37,6 +37,9 @@
               />
             </svg>
           </a>
+          <div class="cv-btn">
+            <button class="btn btn-secondary">Descargar CV</button>
+          </div>
         </div>
       </div>
     </div>
@@ -45,76 +48,94 @@
 
 <style scoped>
 .profile {
-  padding: 5rem 2rem;
+  height: 900px;
+  padding: 2rem;
   display: flex;
   justify-content: center;
+
+  .profile-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1100px;
+    width: 100%;
+  }
+
+  /* Profile Img */
+  .img-container {
+    display: inline-block;
+    border: 4px solid var(--primary);
+    padding: 6px;
+    background-color: #fff;
+    border-radius: 8px;
+
+    img {
+      display: block;
+      width: 300px;
+      height: 350px;
+      border-radius: 4px;
+    }
+  }
 }
 
-.profile-content {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  max-width: 1100px;
-  width: 100%;
-}
-
-.img-container {
-  display: inline-block;
-  border: 4px solid var(--primary);
-  padding: 6px;
-  background-color: #fff;
-  border-radius: 8px;
-}
-
-img {
-  display: block;
-  width: 300px;
-  height: 350px;
-  border-radius: 4px;
-}
-
+/* Profile Text */
 .profile-text {
   max-width: 600px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .text-highlight {
+    color: var(--primary);
+    cursor: pointer;
+  }
+
+  h4 {
+    font-size: 1rem;
+    color: var(--text-secondary);
+  }
+
+  p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
 }
 
-h1 {
-  font-size: 2.5rem;
-}
-
-.text-highlight {
-  color: var(--primary);
-}
-
-h4 {
-  font-size: 1rem;
-  color: var(--text-secondary);
-}
-
-p {
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
+/* Social Network */
 .social-network {
   margin-top: 10px;
   display: flex;
   gap: 15px;
   align-items: center;
+
+  .github:hover {
+    fill: var(--accent);
+  }
+
+  .linkedin:hover {
+    fill: var(--primary);
+  }
+
+  svg {
+    fill: var(--text-secondary);
+    transition: fill 0.3s ease;
+  }
 }
 
-.social-network svg {
-  fill: var(--text-secondary);
-  transition: fill 0.3s ease;
-}
+/* CV Button */
 
-.github:hover {
-  fill: var(--accent);
+.btn-secondary {
+  background-color: var(--primary);
+  color: var(--white);
+  border: 2px solid var(--primary);
 }
-
-.linkedin:hover {
-  fill: var(--primary);
+.btn-secondary:hover {
+  background-color: var(--accent);
+  color: var(--white);
+  border: 2px solid var(--accent);
 }
 </style>
