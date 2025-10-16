@@ -5,6 +5,7 @@ import Profile from './components/Profile.vue'
 import Technologies from './components/Technologies.vue'
 import Projects from './components/Projects.vue'
 import Contact from './components/Contact.vue'
+import Footer from './components/Footer.vue'
 </script>
 
 <template>
@@ -27,8 +28,13 @@ import Contact from './components/Contact.vue'
     <!-- Projects Component -->
     <Projects />
   </main>
-  <!-- Contact component-->
+  <!-- Contact Component-->
   <Contact />
+
+  <footer>
+    <!-- Footer Component-->
+    <Footer />
+  </footer>
 </template>
 
 <style scoped></style>

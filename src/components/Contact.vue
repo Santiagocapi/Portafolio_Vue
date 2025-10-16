@@ -1,5 +1,5 @@
 <template>
-  <section class="contact-section">
+  <section class="contact-section" id="contact">
     <h2>Contacto</h2>
     <!-- Agrego boton para descargar cv en profile.vue
           Algunos cambios en los tags en las cards de projects.vue y education.vue
