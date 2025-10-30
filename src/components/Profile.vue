@@ -38,7 +38,9 @@
             </svg>
           </a>
           <div class="cv-btn">
-            <button class="btn btn-secondary">Descargar CV</button>
+            <button href="/cv/Santiago_Capitani_CV.pdf" download class="btn btn-secondary">
+              Descargar CV
+            </button>
           </div>
         </div>
       </div>
