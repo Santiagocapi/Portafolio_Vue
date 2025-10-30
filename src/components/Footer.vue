@@ -5,11 +5,7 @@
         <h4>Otras Redes Sociales</h4>
         <div class="social-links">
           <a
-<<<<<<< HEAD
             href="https://www.instagram.com/capitanisantiago_"
-=======
-            href="https://www.instagram.com/capitanisantiago_/"
->>>>>>> 9a02f1a0a5c1f894c2b4fffec45cca7326e9815c
             target="_blank"
             aria-label="Instagram"
           >
