@@ -26,9 +26,8 @@
       </div>
 
       <div class="footer-section">
-        <h4>Hecha para nota final de Programacion</h4>
+        <h4>Esta página fue construida con:</h4>
         <div class="tech-attribution">
-          <span>Esta página fue construida con</span>
           <a href="https://vuejs.org/" target="_blank" aria-label="Vue.js">
             <svg class="tech-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
               <path

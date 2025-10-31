@@ -162,11 +162,13 @@ const technologies = ref([
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  transition: all 0.3s ease;
 
   i {
     font-size: 4rem;
     color: var(--grey);
     transition: color 0.4s ease;
+    transition: all 0.4s ease;
   }
 
   span {
@@ -234,5 +236,29 @@ const technologies = ref([
 
 .figma-gradient {
   background-image: linear-gradient(45deg, #f24e1e, #ffffff);
+}
+
+@media (max-width: 600px) {
+  .technologies-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 1rem;
+  }
+
+  .tech-card {
+    height: 110px;
+    gap: 0.5rem;
+  }
+
+  .tech-card i {
+    font-size: 2.5rem;
+  }
+
+  .tech-card span {
+    font-size: 0.9rem;
+  }
 }
 </style>

@@ -203,4 +203,52 @@ const education = ref([
     z-index: 1;
   }
 }
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .education-section .horizontal-timeline {
+    /* Change the direction of the flex to see the timeline vertically */
+    flex-direction: column;
+    width: 100%;
+    max-width: 450px;
+
+    /* Redrew the line from horizontal to vertical. */
+    &::before {
+      top: 0;
+      left: 10px;
+      width: 4px;
+      height: 100%;
+    }
+  }
+
+  .timeline-item {
+    width: 100%;
+    align-items: flex-start;
+    padding-left: 40px;
+    margin-bottom: 2rem;
+  }
+
+  .timeline-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .timeline-item .timeline-point {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-bottom: 0;
+  }
+
+  .timeline-item .flip-card-scene {
+    width: 100%;
+    height: 230px;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-section {
+    padding: 3rem 1rem;
+  }
+}
 </style>

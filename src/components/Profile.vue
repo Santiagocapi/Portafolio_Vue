@@ -140,4 +140,23 @@
   color: var(--white);
   border: 2px solid var(--accent);
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+  .profile-content {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+  .profile-text {
+    align-items: center;
+  }
+  .social-network {
+    justify-content: center;
+  }
+}
 </style>

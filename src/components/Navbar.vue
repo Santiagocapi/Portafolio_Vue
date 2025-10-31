@@ -22,24 +22,59 @@ nav {
   align-items: center;
   padding: 15px 10%;
   border-bottom: 1px solid var(--grey);
+  flex-wrap: wrap;
+  gap: 15px;
+}
 
-  h3 {
-    color: var(--primary);
-  }
+h3 {
+  color: var(--primary);
+  flex-shrink: 0;
+  font-size: 1.25rem;
+  transition: font-size 0.3s ease;
+}
 
-  .navegation {
-    display: flex;
-    gap: 20px;
-  }
+.navegation {
+  display: flex;
+  gap: 20px;
+  transition: gap 0.3s ease;
 }
 
 .navegation a {
   color: var(--text-primary);
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition:
+    color 0.3s ease,
+    font-size 0.3s ease;
+  font-size: 1rem;
+}
 
-  &:hover {
-    color: var(--accent);
+.navegation a:hover {
+  color: var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 15px 2%;
+    justify-content: center;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  .navegation {
+    gap: 10px;
+  }
+
+  .navegation a {
+    font-size: 0.9rem;
   }
 }
 </style>
