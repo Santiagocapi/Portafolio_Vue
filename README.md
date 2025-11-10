@@ -3,7 +3,7 @@
 ![Portfolio Screenshot](public/img/portfolio-screenshot.png) This is my personal portfolio repository, a single-page application (SPA) developed to showcase my projects, my training, and the technologies I master.
 
 **
-Link to the live site:** [tu-portfolio.com](https://tu-portfolio.com) Coming Soon
+Link to the live site:** ([Click Here](https://portafolio-personal-vue.vercel.app))
 
 Portfolio Sections
 
