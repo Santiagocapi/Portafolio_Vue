@@ -2,7 +2,7 @@
   <section class="profile">
     <div class="profile-content">
       <div class="img-container">
-        <img src="" alt="" />
+        <img src="/img/img-profile.jpg" alt="" />
       </div>
       <div class="profile-text">
         <h1>Hola, Soy <span class="text-highlight">Santiago Capitani</span></h1>
@@ -38,9 +38,9 @@
             </svg>
           </a>
           <div class="cv-btn">
-            <button href="/cv/Santiago_Capitani_CV.pdf" download class="btn btn-secondary">
+            <a href="/cv/cv.pdf" download="Santiago_Capitani_CV.pdf" class="btn btn-secondary">
               Descargar CV
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -74,7 +74,7 @@
     img {
       display: block;
       width: 300px;
-      height: 350px;
+      height: 400px;
       border-radius: 4px;
     }
   }
